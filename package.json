@@ -2,6 +2,7 @@
   "name": "curso",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://miguelmorales13.github.io/weather-api-consumer-visual",
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "@material-ui/core": "^4.11.4",
@@ -24,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build"
+    "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/miguelmorales13/weather-api-consumer-visual"
   },
   "eslintConfig": {
     "extends": [
@@ -46,6 +49,7 @@
   },
   "devDependencies": {
     "autoprefixer": "9",
+    "gh-pages": "^3.1.0",
     "postcss": "7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
