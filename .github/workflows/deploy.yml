@@ -19,8 +19,8 @@ jobs:
         run: yarn install
       - name: registry github user
         run: |
-          git config --global user.email <email>
-          git config --global user.name <name>
+          git config --global user.email miguel.moralesr@hotmail.com
+          git config --global user.name "Miguel Angel Morales R."
       - name: deploy the app
         run: yarn deploy
         env:
