@@ -16,12 +16,12 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - name: install packages
-        run: npm install
+        run: yarn install
       - name: registry github user
         run: |
           git config --global user.email <email>
           git config --global user.name <name>
       - name: deploy the app
-        run: npm run deploy
+        run: yarn deploy
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
