@@ -15,6 +15,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "axios": "^0.21.1",
+    "express": "^4.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -22,10 +23,13 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "start:prod": "node index.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "docker:build": "docker build -t cacahuatisimo13/weater-api-consumer .",
+    "docker:run": "docker run -d --name weater-api-consumer -p 80:80 cacahuatisimo13/weater-api-consumer",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/miguelmorales13/weather-api-consumer"
   },
