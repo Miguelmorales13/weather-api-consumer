@@ -30,6 +30,9 @@
     "eject": "react-scripts eject",
     "docker:build": "docker build -t cacahuatisimo13/weater-api-consumer .",
     "docker:run": "docker run -d --name weater-api-consumer -p 80:80 cacahuatisimo13/weater-api-consumer",
+    "docker:remove": "docker stop weater-api-consumer && docker rm weater-api-consumer && docker rmi cacahuatisimo13/weater-api-consumer",
+    "docker:redeploy": "yarn docker:remove && yarn docker:build && yarn docker:run",
+    "docker:deploy": "yarn docker:build && yarn docker:run",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/miguelmorales13/weather-api-consumer"
   },
